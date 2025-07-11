@@ -13,7 +13,7 @@
 \end{center}
 
 \noindent\textit{Solution.}
-Starting with the last column, we have
+Starting with the ones column, we have
 \begin{align*}
     Y+N+N&=10a+Y\\
     N=5a
@@ -23,7 +23,7 @@ where $a=1$ or $a=0$, since $N$ is a single digit number.
 
 \noindent\textit{Case 1.} $a=1$. Plugging this into the previous equation, we get
 \[N=5a=5(1)=5.\]
-Going to the fourth column, since we have to carry a $1$, we have
+Going to the tens column, since we have to carry a $1$, we have
 \begin{align*}
     1+T+E+E&=10b+T\\
     2E&=10b-1
@@ -33,7 +33,7 @@ where $b\in\mathbb{Z}$. However, this is a contradiction since $10b-1$ is not ev
 
 \noindent\textit{Case 2.} $a=0$. Plugging this into the same equation as in \textit{Case 1}, we get
 \[N=5a=5(0)=0.\]
-Going to the fourth column, since we do not carry a $1$, we have
+Going to the tens column, since we do not carry a $1$, we have
 \begin{align*}
     T+E+E&=10b+T\\
     E&=5b
@@ -45,13 +45,13 @@ However, we already have $N=0$. Therefore, $b=1$ so
 Hence, $\boxed{N=0}$ and $\boxed{E=5}$.
 \newpage
 
-\noindent Since $F\neq S$, we must carry a number to the first column. To find this number, notice that
+\noindent Since $F\neq S$, we must carry a number to the ten thousands column. To find this number, notice that
 \[\max(ORTY+TEN+TEN)=9999+999+999<20000.\]
-This means we must carry a $1$ to the first column. Therefore,
+This means we must carry a $1$ to the ten thousands column. Therefore,
 \[S=F+1.\]
-Similarly, since $O\neq I$, we must carry a number to the second column. To find this number, notice that
+Similarly, since $O\neq I$, we must carry a number to the thousands column. To find this number, notice that
 \[\max(RTY+TEN+TEN)=999+999+999<3000.\]
-This means we must carry a $1$ or a $2$ to the second column. Therefore, there are two cases we must look at.
+This means we must carry a $1$ or a $2$ to the thousands column. Therefore, there are two cases we must look at.
 \vspace{20px}
 
 \noindent\textit{Case 1.} Carry a $1$. This yields
@@ -59,7 +59,7 @@ This means we must carry a $1$ or a $2$ to the second column. Therefore, there a
     1+O&=10+I\\
     O&=9+I.
 \end{align*}
-The $10$ came from the fact that we are carrying a $1$ to the first column. Now, since $O$ is a single digit number, it must be the case that $I=0$. However, we already have $N=0$, so this is a contradiction. Therefore, we must carry a $2$.
+The $10$ came from the fact that we are carrying a $1$ to the ten thousands column. Now, since $O$ is a single digit number, it must be the case that $I=0$. However, we already have $N=0$, so this is a contradiction. Therefore, we must carry a $2$.
 \vspace{20px}
 
 \noindent\textit{Case 2.} Carry a $2$. This yields
@@ -72,17 +72,17 @@ Now, since $O$ is a single digit number, it must be the case that $I=0$ or $I=1$
 Hence, $\boxed{I=1}$ and $\boxed{O=9}$.
 \newpage
 
-\noindent Looking at the fourth column, since $E=5$, we have
+\noindent Looking at the tens column, since $E=5$, we have
 \[\max(T+E+E)=\max(T+5+5)=9+5+5=19.\]
-Therefore, we must carry a $1$ to the third column. This yields
+Therefore, we must carry a $1$ to the hundreds column. This yields
 \begin{align*}
     1+R+T+T&=20+X\\
     1+R+2T&=20+X\\
     R&=X-2T+19.
 \end{align*}
-The $20$ came from the fact that we are carrying a $2$ to the second column. Now we have an equation for $R$. To digest this equation, let us look at all of the possibilities for $T$. First of all, it must be the case that
+The $20$ came from the fact that we are carrying a $2$ to the thousands column. Now we have an equation for $R$. To digest this equation, let us look at all of the possibilities for $T$. First of all, it must be the case that
 \[1+R+T+T=1+R+2T\geq 20.\]
-This is since the sum must be at least $20$ to carry a $2$ to the second column.
+This is since the sum must be at least $20$ to carry a $2$ to the thousands column.
 \vspace{20px}
 
 \noindent\textit{Case 1.} $T=0$, $T=1$, $T=5$, or $T=9$. Any of these $T$ values violate the values of $N$, $E$, $I$, and $O$. Therefore, $T\neq 0$, $T\neq 1$, $T\neq 5$, and $T\neq 9$.
@@ -90,12 +90,12 @@ This is since the sum must be at least $20$ to carry a $2$ to the second column.
 
 \noindent\textit{Case 2.} $T\in\mathbb{Z}$ such that $2\leq T\leq 4$. We have
 \[\max(1+R+2T)=1+9+2(4)=18<20.\]
-This means the sum is not big enough to carry a $2$ to the second column. Therefore, $T$ cannot be $2\leq T\leq 4$.
+This means the sum is not big enough to carry a $2$ to the thousands column. Therefore, $T$ cannot be $2\leq T\leq 4$.
 \vspace{20px}
 
 \noindent\textit{Case 3.} $T=6$. We have
 \[\max(1+R+2T)=\max(1+R+2(6))=\max(R+13)=9+13=22\geq 20.\]
-This means the sum is big enough to carry a $2$ to the second column. Since this inequality holds for $T=6$, it will also hold for any $T\in\mathbb{Z}$ such that $T>6$. Thus, this inequality holds for \textit{Case 4} and \textit{Case 5}. Now, using the equation that we derived for $R$, we get
+This means the sum is big enough to carry a $2$ to the thousands column. Since this inequality holds for $T=6$, it will also hold for any $T\in\mathbb{Z}$ such that $T>6$. Thus, this inequality holds for \textit{Case 4} and \textit{Case 5}. Now, using the equation that we derived for $R$, we get
 \begin{align*}
     R&=X-2T+19\\
     R&=X-2(6)+19\\
