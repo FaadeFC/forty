@@ -15,8 +15,8 @@
 \noindent\textit{Solution.}
 Starting with the ones column, we have
 \begin{align*}
-    Y+N+N&=10a+Y\\
-    N=5a
+  Y+N+N&=10a+Y\\
+  N=5a
 \end{align*}
 where $a=1$ or $a=0$, since $N$ is a single digit number.
 \vspace{20px}
@@ -25,8 +25,8 @@ where $a=1$ or $a=0$, since $N$ is a single digit number.
 \[N=5a=5(1)=5.\]
 Going to the tens column, since we have to carry a $1$, we have
 \begin{align*}
-    1+T+E+E&=10b+T\\
-    2E&=10b-1
+  1+T+E+E&=10b+T\\
+  2E&=10b-1
 \end{align*}
 where $b\in\mathbb{Z}$. However, this is a contradiction since $10b-1$ is not even. Therefore, $a\neq 1$.
 \vspace{20px}
@@ -35,8 +35,8 @@ where $b\in\mathbb{Z}$. However, this is a contradiction since $10b-1$ is not ev
 \[N=5a=5(0)=0.\]
 Going to the tens column, since we do not carry a $1$, we have
 \begin{align*}
-    T+E+E&=10b+T\\
-    E&=5b
+  T+E+E&=10b+T\\
+  E&=5b
 \end{align*}
 where $b=1$ or $b=0$, since $E$ is a single digit number. If $b=0$, we get
 \[E=5b=5(0)=0.\]
@@ -56,16 +56,16 @@ This means we must carry a $1$ or a $2$ to the thousands column. Therefore, ther
 
 \noindent\textit{Case 1.} Carry a $1$. This yields
 \begin{align*}
-    1+O&=10+I\\
-    O&=9+I.
+  1+O&=10+I\\
+  O&=9+I.
 \end{align*}
 The $10$ came from the fact that we are carrying a $1$ to the ten thousands column. Now, since $O$ is a single digit number, it must be the case that $I=0$. However, we already have $N=0$, so this is a contradiction. Therefore, we must carry a $2$.
 \vspace{20px}
 
 \noindent\textit{Case 2.} Carry a $2$. This yields
 \begin{align*}
-    2+O&=10+I\\
-    O&=8+I.
+  2+O&=10+I\\
+  O&=8+I.
 \end{align*}
 Now, since $O$ is a single digit number, it must be the case that $I=0$ or $I=1$. However, we already have $N=0$. Thus, $I=1$. Therefore
 \[O=8+I=8+1=9.\]
@@ -76,9 +76,9 @@ Hence, $\boxed{I=1}$ and $\boxed{O=9}$.
 \[\max(T+E+E)=\max(T+5+5)=9+5+5=19.\]
 Therefore, we must carry a $1$ to the hundreds column. This yields
 \begin{align*}
-    1+R+T+T&=20+X\\
-    1+R+2T&=20+X\\
-    R&=X-2T+19.
+  1+R+T+T&=20+X\\
+  1+R+2T&=20+X\\
+  R&=X-2T+19.
 \end{align*}
 The $20$ came from the fact that we are carrying a $2$ to the thousands column. Now we have an equation for $R$. To digest this equation, let us look at all of the possibilities for $T$. First of all, it must be the case that
 \[1+R+T+T=1+R+2T\geq 20.\]
@@ -97,9 +97,9 @@ This means the sum is not big enough to carry a $2$ to the thousands column. The
 \[\max(1+R+2T)=\max(1+R+2(6))=\max(R+13)=9+13=22\geq 20.\]
 This means the sum is big enough to carry a $2$ to the thousands column. Since this inequality holds for $T=6$, it will also hold for any $T\in\mathbb{Z}$ such that $T>6$. Thus, this inequality holds for \textit{Case 4} and \textit{Case 5}. Now, using the equation that we derived for $R$, we get
 \begin{align*}
-    R&=X-2T+19\\
-    R&=X-2(6)+19\\
-    R&=X+7.
+  R&=X-2T+19\\
+  R&=X-2(6)+19\\
+  R&=X+7.
 \end{align*}
 First of all, $X\neq 0$ and $X\neq 1$ since we already have $N=0$ and $I=1$. Next, if $X=2$, we get
 \[R=X+7=2+7=9.\]
@@ -110,9 +110,9 @@ However, $R$ must be a single digit number. Therefore, by way of contradiction, 
 
 \noindent\textit{Case 4.} $T=7$. Using the equation that we derived for $R$, we get
 \begin{align*}
-    R&=X-2T+19\\
-    R&=X-2(7)+19\\
-    R&=X+5.
+  R&=X-2T+19\\
+  R&=X-2(7)+19\\
+  R&=X+5.
 \end{align*}
 First of all, $X\neq 0$ and $X\neq 1$ since we already have $N=0$ and $I=1$. Next, if $X=2$, we get
 \[R=X+5=2+5=7.\]
@@ -132,9 +132,9 @@ However, $3$ is already occupied by another variable. Therefore, by way of contr
 
 \noindent\textit{Case 5.} $T=8$. Using the equation that we derived for $R$, we get
 \begin{align*}
-    R&=X-2T+19\\
-    R&=X-2(8)+19\\
-    R&=X+3.
+  R&=X-2T+19\\
+  R&=X-2(8)+19\\
+  R&=X+3.
 \end{align*}
 First of all, $X\neq 0$, $X\neq 1$, and $X\neq 5$ since we already have $N=0$, $I=1$, and $E=5$. Next, if $X=2$, we get
 \[R=X+3=2+3=5.\]
@@ -170,15 +170,15 @@ Therefore, $\boxed{T=8}$, $\boxed{X=4}$, $\boxed{R=7}$, $\boxed{F=2}$, and $\box
 The missing digit it $6$. Thus, $Y=6$. Therefore, the answer is \[\boxed{N=0},\boxed{I=1},\boxed{F=2},\boxed{S=3},\boxed{X=4},\boxed{E=5},\boxed{Y=6},\boxed{R=7},\boxed{T=8},\boxed{O=9}.\]
 To see if this is correct, we plug in the values,
 \begin{align*}
-    FORTY&=29786,\\
-    TEN&=850,\\
-    SIXTY&=31486,
+  FORTY&=29786,\\
+  TEN&=850,\\
+  SIXTY&=31486,
 \end{align*}
 and check the sum,
 \begin{align*}
-    FORTY+TEN+TEN&=29786+850+850\\
-    &=31486\\
-    &=SIXTY.
+  FORTY+TEN+TEN&=29786+850+850\\
+  &=31486\\
+  &=SIXTY.
 \end{align*}
 \qed
 
